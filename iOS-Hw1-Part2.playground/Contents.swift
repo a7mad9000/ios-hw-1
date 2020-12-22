@@ -16,8 +16,15 @@ import UIKit
  1.5) استعمل if statement , اذا كانت المصفوفة تحتوي على بيتزا قم بطباعه "yumm Pizza🍕😋"
 
 */
-
-
+var favFood=["Curry","Burger","Pasta"]
+favFood.append("Pizza")
+print(favFood[0])
+for x in favFood {
+    print(x)
+}
+if favFood.contains("Pizza") {
+    print("😋🍕yumm Pizza")
+}
 
 
 
@@ -38,6 +45,21 @@ var numbers = [1,2,3,4,5,6,7,8,9,10]
  ملاحظة: معادله الرقم الزوجي number % 2 == 0
 
 */
+var evenNumbers = [Int]()
+var eNum=0
+for y in numbers{
+    if y%2==0 {
+        eNum+=1
+    }
+}
+print("عدد الاعداد الزوجية = ",eNum)
+for num in numbers{
+    if num%2==0 {
+        evenNumbers.append(num)
+    }
+}
+
+
 
 //: # 3️⃣  السؤال الثالث
 /*:
@@ -56,4 +78,23 @@ var numbers = [1,2,3,4,5,6,7,8,9,10]
 
  
  */
-   
+
+for n in 1...5{
+    for v in 1...10 {
+        print(n,"x",v," = ",n*v)
+    }
+    
+}
+
+
+
+// bonus
+for _ in 1...7 {
+    for x in 1...20 {
+        if x==20 {
+            print("*")
+            continue
+        }
+        print("*",terminator: "")
+    }
+}
